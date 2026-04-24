@@ -53,13 +53,18 @@ shellcheck), just send the PR.
 
 ### Testing locally
 
-There are no unit tests yet (early days). Minimum before requesting review:
+Minimum before requesting review:
 
 ```bash
 shellcheck -x -e SC1091 bin/site-bootstrap lib/*.sh install.sh
+bats tests/                     # install bats-core first (brew / apt)
 ./bin/site-bootstrap --help
 ./bin/site-bootstrap doctor
 ```
+
+CI runs both `shellcheck` and `bats tests/` on every push — see
+`.github/workflows/ci.yml`. If you add a new subcommand, add at least a help-
+text assertion to `tests/smoke.bats`.
 
 If you changed deploy logic, also run end-to-end against a throwaway VPS:
 

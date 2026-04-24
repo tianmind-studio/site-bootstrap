@@ -8,7 +8,8 @@
   <a href="./LICENSE"><img src="https://img.shields.io/badge/License-MIT-yellow.svg?style=flat-square" alt="MIT"/></a>
   <img src="https://img.shields.io/badge/shell-bash-4EAA25?style=flat-square&logo=gnubash&logoColor=white" alt="Bash"/>
   <img src="https://img.shields.io/badge/dependencies-ssh%20%2B%20rsync%20%2B%20jq-2EA043?style=flat-square" alt="Dependencies"/>
-  <img src="https://img.shields.io/badge/status-v0.1.0-0A66C2?style=flat-square" alt="Version"/>
+  <img src="https://img.shields.io/badge/tests-shellcheck%20%2B%20bats-8A2BE2?style=flat-square" alt="Tests"/>
+  <img src="https://img.shields.io/github/actions/workflow/status/tianmind-studio/site-bootstrap/ci.yml?branch=main&style=flat-square&label=CI" alt="CI"/>
 </p>
 
 ---
