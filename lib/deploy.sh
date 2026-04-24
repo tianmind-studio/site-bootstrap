@@ -85,7 +85,23 @@ sb_cmd_deploy() {
   local src_dir
   if [[ "$type" == "static" ]]; then
     src_dir="$source"
-    [[ ! -d "$src_dir" ]] && src_dir="."
+    # If the declared source doesn't exist, refuse to silently upload the
+    # project root — that's almost certainly not what the user wanted. The
+    # only case where "." is the right answer is when they explicitly set it.
+    if [[ ! -d "$src_dir" ]]; then
+      if [[ "$src_dir" == "." ]]; then
+        sb_err "source directory '.' does not exist (running from the wrong directory?)"
+        return 1
+      fi
+      sb_err "source directory does not exist: $src_dir"
+      if [[ -n "$build" ]]; then
+        sb_info "you set deploy.build to '$build' but the output dir '$src_dir' is missing."
+        sb_info "the build may have failed silently; re-run with --verbose."
+      else
+        sb_info "did you forget a deploy.build step? or set deploy.source to '.'?"
+      fi
+      return 1
+    fi
   else
     src_dir="."
   fi
