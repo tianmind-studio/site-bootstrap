@@ -20,7 +20,7 @@
 #   --verbose            show ssh/rsync details
 #   --config <path>      use alternate site.yaml path
 #
-# Docs: https://github.com/tianmind-studio/site-bootstrap
+# Docs: https://github.com/491034170/site-bootstrap
 
 set -euo pipefail
 
@@ -67,7 +67,7 @@ Environment:
   CF_ZONE_ID        Cloudflare zone ID for the apex domain.
   (Or put them in a local .env file — site-bootstrap will load it.)
 
-Docs: https://github.com/tianmind-studio/site-bootstrap
+Docs: https://github.com/491034170/site-bootstrap
 EOF
 }
 

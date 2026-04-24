@@ -3,17 +3,18 @@
 # site-bootstrap installer. Drops the CLI into ~/.local/bin by default.
 #
 # Usage:
-#   curl -fsSL https://raw.githubusercontent.com/tianmind-studio/site-bootstrap/main/install.sh | bash
+#   curl -fsSL https://raw.githubusercontent.com/491034170/site-bootstrap/main/install.sh | bash
 #
 # Env:
 #   SB_PREFIX   Install prefix. Default: $HOME/.local
 #   SB_REF      Git ref (branch / tag). Default: main
+#   SB_REPO     GitHub repo slug. Default: 491034170/site-bootstrap
 
 set -euo pipefail
 
 SB_PREFIX="${SB_PREFIX:-$HOME/.local}"
 SB_REF="${SB_REF:-main}"
-REPO="tianmind-studio/site-bootstrap"
+REPO="${SB_REPO:-491034170/site-bootstrap}"
 TMPDIR="$(mktemp -d)"
 trap 'rm -rf "$TMPDIR"' EXIT
 

@@ -32,7 +32,7 @@
 
 ```bash
 # 1. 装
-curl -fsSL https://raw.githubusercontent.com/tianmind-studio/site-bootstrap/main/install.sh | bash
+curl -fsSL https://raw.githubusercontent.com/491034170/site-bootstrap/main/install.sh | bash
 
 # 2. 脚手架（交互式问你域名、服务器、站型）
 site-bootstrap new my-blog
@@ -139,7 +139,7 @@ dns:
 ## English quick reference
 
 ```bash
-curl -fsSL https://raw.githubusercontent.com/tianmind-studio/site-bootstrap/main/install.sh | bash
+curl -fsSL https://raw.githubusercontent.com/491034170/site-bootstrap/main/install.sh | bash
 
 site-bootstrap new my-blog
 cd my-blog
